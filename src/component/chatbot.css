@@ -1,0 +1,158 @@
+/* Chatbot.css */
+.chatbot-container {
+    width: 70%;
+    max-width: 800px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif; /* Or your preferred font */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    background-image: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
+}
+
+.chat-header {
+    padding: 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    border-bottom: 1px solid #eee;
+    background-color: #00bcd4;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 10; /* Ensure it stays on top if needed */
+}
+
+.chat-messages {
+    flex-grow: 1;
+    
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column; /* Keep this for vertical stacking */
+    
+    padding-bottom: 30px;
+    gap: 12px; /* Increased gap between messages */
+    padding: 25px;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 10px; /* Slightly less rounded */
+    margin-bottom: 8px; /* Adjust spacing */
+    max-width: 75%;
+    word-break: break-word;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+    border-radius: 15px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.message.user {
+    background-color: #e0f7fa; /* Light cyan */
+    color: #333; /* Dark text for contrast */
+    border-radius: 10px 10px 0px 10px;
+    align-self: flex-end;
+    text-align: right;
+    border-radius: 15px 15px 0px 15px;
+}
+
+.message.bot {
+    background-color: #f9f9f9; /* Light grey */
+    color: #333;
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 10px 10px 10px 0px;
+    align-self: flex-start;
+    text-align: left;
+    border-radius: 15px 15px 15px 0px;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+}
+
+.input-field {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Less rounded */
+    margin-right: 10px;
+    font-size: 1em;
+    border-radius: 20px; /* More rounded input field */
+    padding: 10px 15px; /* Slightly more padding */
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.send-button {
+    border: none;
+    
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    
+    background-color: #00bcd4; /* Teal */
+    color: #fff;
+    
+    transition: background-color 0.3s ease;
+    border-radius: 20px; /* More rounded button */
+    padding: 10px 18px; /* Slightly more padding */
+    font-weight: 500; /* Slightly lighter bold */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.send-button:hover {
+    background-color: #0097a7;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); 
+}
+
+.predefined-questions {
+    padding: 10px 20px;
+    background-color: #f8f8f8; /* Match input background */
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center; /* Center the buttons */
+}
+
+.predefined-question-button {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.predefined-question-button:hover {
+    background-color: #00bcd4;
+    color: #fff;
+    border-color: #00bcd4;
+}
+
+/* Scrollbar Styling (for Webkit browsers like Chrome and Safari) - Optional */
+.chat-messages::-webkit-scrollbar {
+    width: 8px; /* Adjust width */
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Scrollbar track color */
+    border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: #aaa; /* Scrollbar thumb color */
+    border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background-color: #777;
+}
