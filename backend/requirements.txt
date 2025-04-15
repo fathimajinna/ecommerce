@@ -1,0 +1,18 @@
+# Core Agent & Framework
+agno
+fastapi
+uvicorn[standard]
+
+# LLM & Embeddings
+google-generativeai
+
+# Vector DB Client
+supabase
+
+# Web Search Tool
+google-search-results # Serper API client library
+
+# Utilities
+python-dotenv
+requests # Still useful potentially, keep for now
+beautifulsoup4 # Might remove if not used elsewhere, keep for now
